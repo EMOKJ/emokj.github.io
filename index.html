@@ -1,12 +1,91 @@
-<html>
-    <head>
-        <title>>EMO视界主页</title>
-        <link rel="stylesheet" type="text/css" href="../all/css/styles.css">  
-    </head>
-    
-    <body style="background-color:#00FFFF;">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>EMO视界主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-around;
+            background-color: hsl(22, 55%, 85%);
+            padding: 1rem;
+        }
+        header a {
+            color: hwb(0 2% 89%);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- 假设您已经引入了jQuery库 -->
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('header nav a').on('click', function(e) {
+                e.preventDefault();
+                const sectionId = $(this).data('target');
+                
+                // 更新导航链接的活动状态
+                $('header nav a').removeClass('active');
+                $(this).addClass('active');
 
-        <a href="https://shenqirjc.lanzoux.com/b012r94la?w1?2">立即下载</a>
+                // 显示对应内容区域
+                $('.content').removeClass('active');
+                $('#' + sectionId).addClass('active');
 
-    </body>
+                // 如果需要异步加载内容，可以在此处恢复Ajax请求逻辑
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" data-target="home" class="active">EMO视界or</a>
+
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content active">
+            <h2>首页 - EMO视界简介</h2>
+            <ul>
+            <li>特点一：拥有专项线路,更加快速，更加清晰</li>
+            <li>特点二：跨平台支持，包括手机版和电视版，甚至平板的使用</li>
+            <li>特点三：拥有超多的线路支持，如动漫线路，短剧，电影剧集，体育，戏曲，课堂等</li>
+             <h3>请根据自己的需要下载属于你的版本！</h3>
+            </ul>
+        </section>
+
+        <section id="mobile" class="content">
+            <h2>手机版 - EMO视界手机版</h2>
+            <ul>
+            <li>支持手机，平板使用，不支持任何电视</li>
+            <li>支持投屏功能，目前不太稳定，仍在开发中</li>
+            <a href="https://shenqirjc.lanzn.com/i5N4W1jee2bc">手机版版下载</a>
+            </ul>
+        </section>
+
+        <section id="tv" class="content">
+            <h2>电视版 - EMO视界电视版</h2>
+            <p>电视版针对安卓版本，分为正式版和兼容版，目前只支持安卓系统，暂不支持苹果系统</p>
+            <ul>
+            <li>正式版:兼容安卓5以上设备,功能更加全面</li>
+            <li>兼容版: 兼容安卓4以上设备,功能相对简洁,但功能相对有限</li>
+            <li>纯净版：是兼容版的绿色版本</li>
+            <li>后续正式版和兼容版，逐渐纯净化，下架纯净版</li>
+            <a href="https://shenqirjc.lanzoux.com/b012r94la?w1?2">电视版下载</a>
+            </ul>
+        </section>
+
+        <section id="circle" class="content">
+            <h2>圈子</h2>
+            <img src="U:\EMO科技\服务器\html\images\myimage.jpg" alt="圈子图片示例">
+            <p>这里是关于圈子的介绍和图片展示。</p>
+        </section>
+    </main>
+</body>
 </html>
