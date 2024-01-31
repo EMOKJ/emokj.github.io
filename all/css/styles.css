@@ -1,0 +1,36 @@
+/* 去除列表默认的边距 */  
+ul {  
+  margin: 0;  
+  padding: 0;  
+}  
+  
+/* 将链接颜色设置为蓝色 */  
+a {  
+  color: blue;  
+}  
+  
+/* 设置页面标题的字体大小 */  
+h1 {  
+  font-size: 24px;  
+}  
+  
+/* 设置导航栏的样式 */  
+nav ul {  
+  list-style-type: none;  
+}  
+  
+nav ul li {  
+  display: inline-block;  
+  margin-right: 10px;  
+}  
+  
+nav ul li a {  
+  display: block;  
+  padding: 10px;  
+  text-decoration: none;  
+}  
+  
+/* 设置正文的样式 */  
+section {  
+  padding: 20px;  
+}
