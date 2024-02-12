@@ -48,22 +48,33 @@
             <a href="#" data-target="home" class="active">EMO视界or</a>
                   </nav>
     </header>
-    <main>
-        <section id="home" class="content active">
-            <h2>首页 - EMO视界简介</h2>
-            <ul>
-            <li>特点一：拥有专项线路,更加快速，更加清晰</li>
-            <li>特点二：跨平台支持，包括手机版和电视版，甚至平板的使用</li>
-            <li>特点三：拥有超多的线路支持，如动漫线路，短剧，电影剧集，体育，戏曲，课堂等</li>
+<main>
+    <section id="home" class="content">
+        <h2>首页 - EMO视界简介</h2>
+        <ul class="feature-list">
+            <li class="feature-item">特点一：拥有专项线路,更加快速，更加清晰</li>
+            <li class="feature-item">特点二：跨平台支持，包括手机版和电视版，甚至平板的使用</li>
+            <li class="feature-item">特点三：拥有超多的线路支持，如动漫线路，短剧，电影剧集，体育，戏曲，课堂等</li>
+        </ul>
 
-        <img id="myImage" src="images/AA.png" alt="点击加载新页面"width="200" height="200">
+    </section>
+</main>
 
-    <script>
-    document.getElementById('myImage').addEventListener('click', function() {
-        window.location.href = 'gonggao.html';
-    });
-    </script>
-             <h3>↑点击查看详细公告内容↑</h3>
+<style>
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  padding: 10px 0; /* 这里设置了上下10像素的内边距作为列表项间的空隙 */
+}
+</style>
+<h3>2024/02/12 EMO视界维护公告</h3>
+<p>为了提供更好的服务，我们将于近期进行系统维护。详情及更多信息，请点击以下链接查看：</p>
+<a href="gonggao.html" target="_blank">查看维护公告详情</a>
+            </style>
             </ul>
         </section>
 
@@ -73,6 +84,7 @@
             <li>支持手机，平板使用，不支持任何电视</li>
             <li>支持投屏功能，目前不太稳定，仍在开发中</li>
             <a href="https://shenqirjc.lanzn.com/i5N4W1jee2bc">EMO视界手机版1.1</a>
+            <li class="feature-divider"></li>
             <a href="https://shenqirjc.lanzn.com/ivHgp1o30zze">EMO视界手机版1.2</a>
             </ul>
         </section>
