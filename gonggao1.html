@@ -1,1 +1,81 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMO视界公告</title>
+    <style>
+        /* 一些基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .announcement {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 公告内容 -->
+    <div class="announcement">
+        <h2>EMO视界2024年3月11日维护公告</h2>
+        <h3>亲爱的用户，您好！为了提供更好的服务体验，我们于近期进行系统升级维护</H3>
+            <h4>内容一：对腾讯，爱奇艺，优酷，芒果，线路进行优化，删除原有解析线路1（有广告并不稳定）</h4>
+        <img src="images/A1.png" alt="系统升级维护演示图" style="max-width: 100%; max-height: 100px; height: auto; display: block; margin-bottom: 20px;">
+        <h4>内容二：新增应用商城，您可以在emo视界中下载更多软件，后续增加更多软件</h4>
+        <img src="images/B1.png" alt="系统升级维护演示图" style="max-width: 100%; max-height: 100px; height: auto; display: block; margin-bottom: 20px;">
+        <img src="images/B2.png" alt="系统升级维护演示图" style="max-width: 100%; max-height: 100px; height: auto; display: block; margin-bottom: 20px;">
+        <h4>内容三：新增一个音乐MV线路，如果你的车机可以安装emo视界，这个线路将会是不错的选择</h4>
+        <img src="images/C1.png" alt="系统升级维护演示图" style="max-width: 100%; max-height: 100px; height: auto; display: block; margin-bottom: 20px;">
+       <h4>4K高清线路网站需要验证，目前已下架</h4>
+<img src="images/D1.png" alt="系统升级维护演示图" style="max-width: 100%; max-height: 200px; height: auto; display: block; margin-bottom: 20px;">
+        <h2>使用说明：请在搜索视频后选择EMO专享线路1/2或者爱优腾芒线路，其他线路均有问题或广告，仅为备用！</h2>
+    </div>
+    <script>
+    (function () {
+        var a_idx = 0;
+        window.onclick = function (event) {
+
+        var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+
+                "❤敬业❤", "❤诚信❤", "❤友善❤");
+            var heart = document.createElement("b"); //创建b元素
+            heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+            document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+            a_idx = (a_idx + 1) % a.length;
+            heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+            var f = 16, // 字体大小
+                x = event.clientX - f / 2, // 横坐标
+                y = event.clientY - f, // 纵坐标
+                c = randomColor(), // 随机颜色
+                a = 1, // 透明度
+                s = 1.2; // 放大缩小
+            var timer = setInterval(function () { //添加定时器
+                if (a <= 0) {
+                    document.body.removeChild(heart);
+                    clearInterval(timer);
+                } else {
+                    heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                        c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                        s + ");";
+                    y--;
+                    a -= 0.016;
+                    s += 0.002;
+                }
+            }, 15)
+        }
+        // 随机颜色
+        function randomColor() {
+            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+            .random() * 255)) + ")";
+        }
+    }());
+</script>
+    <!-- 可以添加更多公告 -->
+    
+</body>
+</html>
