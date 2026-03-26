@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 粒子背景 -->
-    <canvas id="particles"></canvas>
-
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
@@ -24,9 +21,6 @@
                 <li><a href="#features">功能</a></li>
                 <li><a href="#screenshots">截图</a></li>
                 <li><a href="#download">下载</a></li>
-                <li><a href="#updates">更新</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#testimonials">好评</a></li>
                 <li><a href="#about">关于</a></li>
             </ul>
             <button class="mobile-menu-btn">
@@ -38,28 +32,18 @@
     <!-- 英雄区域 -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1><span class="typewriter"></span><span class="cursor">|</span></h1>
+            <h1>EMO视界</h1>
             <p class="subtitle">完全免费的TV影视软件</p>
             <p class="description">海量影视资源，高清流畅播放，专为智能电视打造</p>
             <div class="hero-buttons">
-                <a href="#download" class="btn btn-primary neon-btn">
+                <a href="#download" class="btn btn-primary">
                     <i class="fas fa-download"></i>
                     立即下载
                 </a>
-                <a href="#features" class="btn btn-secondary neon-btn">
+                <a href="#features" class="btn btn-secondary">
                     <i class="fas fa-info-circle"></i>
                     了解更多
                 </a>
-            </div>
-            <div class="online-stats">
-                <div class="online-counter">
-                    <span class="pulse-dot"></span>
-                    <span class="counter-text">网页在线: <span id="web-count">0</span> 人</span>
-                </div>
-                <div class="online-counter app-counter">
-                    <span class="pulse-dot app-dot"></span>
-                    <span class="counter-text">APP观看: <span id="app-count">0</span> 人</span>
-                </div>
             </div>
         </div>
         <div class="hero-image">
@@ -195,196 +179,6 @@
                     <div class="step">
                         <span class="step-number">4</span>
                         <p>享受海量影视资源</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 版本更新日志 -->
-    <section id="updates" class="updates">
-        <div class="container">
-            <h2><i class="fas fa-history"></i> 版本更新</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024-03-15</div>
-                        <h3>v1.7.2</h3>
-                        <ul>
-                            <li>优化播放核心，提升加载速度</li>
-                            <li>修复部分设备闪退问题</li>
-                            <li>新增多个影视资源站点</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024-02-28</div>
-                        <h3>v1.7.0</h3>
-                        <ul>
-                            <li>全新UI界面，更加美观</li>
-                            <li>支持4K超高清播放</li>
-                            <li>新增搜索历史功能</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024-02-10</div>
-                        <h3>v1.6.5</h3>
-                        <ul>
-                            <li>修复已知BUG</li>
-                            <li>优化遥控器操作体验</li>
-                            <li>增加收藏夹功能</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ常见问题 -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2><i class="fas fa-question-circle"></i> 常见问题</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>EMO视界是免费的吗？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>是的，EMO视界完全免费，无需付费开通会员，也没有任何隐藏收费项目。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>支持哪些设备？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>EMO视界支持智能电视、电视盒子、Android手机和平板等设备。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>如何安装到电视上？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>下载APK文件到U盘，将U盘插入电视，通过电视的文件管理器找到APK文件进行安装即可。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>播放卡顿怎么办？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>请检查网络连接是否稳定，可以尝试切换播放源或降低画质。如果问题持续，请尝试清除应用缓存。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>资源更新频率如何？</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>我们的资源每日更新，热门影视会第一时间同步，确保您不会错过任何精彩内容。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 用户好评 -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2><i class="fas fa-star"></i> 用户好评</h2>
-            <div class="testimonials-wrapper">
-                <div class="testimonials-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="avatar"><i class="fas fa-user"></i></div>
-                            <div class="user-info">
-                                <span class="username">追剧达人小王</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"用了好多TV软件，EMO视界是最好用的！资源全、画质好、还不收费，强烈推荐！"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="avatar"><i class="fas fa-user"></i></div>
-                            <div class="user-info">
-                                <span class="username">影视爱好者老李</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"给爸妈电视装了这个，他们现在天天追剧，操作简单，资源丰富，非常满意！"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="avatar"><i class="fas fa-user"></i></div>
-                            <div class="user-info">
-                                <span class="username">数码玩家小张</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"界面设计很现代，4K画质播放流畅，比很多付费软件还好用，必须五星好评！"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="avatar"><i class="fas fa-user"></i></div>
-                            <div class="user-info">
-                                <span class="username">追番少女小美</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"动漫资源太全了！新番更新很快，画质也很棒，终于找到完美的追番神器了！"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="avatar"><i class="fas fa-user"></i></div>
-                            <div class="user-info">
-                                <span class="username">电影迷大刘</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"无广告这点太赞了！看电影终于不用忍受漫长的广告了，希望一直保持下去！"</p>
                     </div>
                 </div>
             </div>
