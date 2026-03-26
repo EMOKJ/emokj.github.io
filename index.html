@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 加载动画 -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-icon">
+                <i class="fas fa-tv"></i>
+            </div>
+            <div class="loader-text">EMO视界</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- 粒子背景 -->
     <canvas id="particles"></canvas>
 
@@ -27,11 +40,17 @@
                 <li><a href="#updates">更新</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#testimonials">好评</a></li>
+                <li><a href="#links">更多</a></li>
                 <li><a href="#about">关于</a></li>
             </ul>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -310,7 +329,7 @@
                         <div class="testimonial-header">
                             <div class="avatar"><i class="fas fa-user"></i></div>
                             <div class="user-info">
-                                <span class="username">追剧达人小王</span>
+                                <span class="username">用户 a3f2k9</span>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -326,7 +345,7 @@
                         <div class="testimonial-header">
                             <div class="avatar"><i class="fas fa-user"></i></div>
                             <div class="user-info">
-                                <span class="username">影视爱好者老李</span>
+                                <span class="username">用户 b7d1m4</span>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -342,7 +361,7 @@
                         <div class="testimonial-header">
                             <div class="avatar"><i class="fas fa-user"></i></div>
                             <div class="user-info">
-                                <span class="username">数码玩家小张</span>
+                                <span class="username">用户 c9x5p2</span>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -358,7 +377,7 @@
                         <div class="testimonial-header">
                             <div class="avatar"><i class="fas fa-user"></i></div>
                             <div class="user-info">
-                                <span class="username">追番少女小美</span>
+                                <span class="username">用户 d2k8n6</span>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -374,7 +393,7 @@
                         <div class="testimonial-header">
                             <div class="avatar"><i class="fas fa-user"></i></div>
                             <div class="user-info">
-                                <span class="username">电影迷大刘</span>
+                                <span class="username">用户 e5j3h1</span>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -386,6 +405,185 @@
                         </div>
                         <p class="testimonial-text">"无广告这点太赞了！看电影终于不用忍受漫长的广告了，希望一直保持下去！"</p>
                     </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 f8w4q7</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"带娃神器！里面的儿童频道内容很丰富，孩子很喜欢，再也不用到处找动画片了！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 g1y6s9</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"下班回家就想躺着看电视，EMO视界资源多加载快，完美满足我的需求，已推荐给同事！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 h4t2r8</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"玩了这么多年影视软件，EMO视界是良心之作！资源更新快，画质稳定，强烈安利！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 j7v5c3</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"宿舍一起用电视看EMO视界，追剧体验超棒！室友都被我种草了，大家一起用！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 k9m1b6</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"操作很简单，我这个老人都能轻松使用，戏曲频道很全，每天都要看好几个小时！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 l3n8d4</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"在我的频道推荐过EMO视界，界面美观功能强大，是目前最好的免费TV软件之一！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 m6f2k1</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"店里展示电视都用EMO视界，客户看了都想装，已经帮好多人安装了，口碑很好！"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-info">
+                                <span class="username">用户 n5h7j9</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"体育频道很全，世界杯、NBA都能看，画质清晰不卡顿，运动迷的福音！"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联动区域 -->
+    <section id="links" class="links-section">
+        <div class="container">
+            <h2><i class="fas fa-link"></i> 更多资源</h2>
+            <div class="links-grid">
+                <!-- 资源仓库 -->
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h3>资源仓库</h3>
+                    <p>由 OpenList 驱动的个人存储站，提供丰富的免费软件下载</p>
+                    <a href="https://pan.emokj.cn" class="btn btn-primary neon-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        访问 pan.emokj.cn
+                    </a>
+                </div>
+
+                <!-- 微信公众号 -->
+                <div class="link-card wechat-card">
+                    <div class="link-icon wechat-icon">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h3>微信公众号</h3>
+                    <p>关注公众号获取最新动态、使用教程和技术支持</p>
+                    <div class="qr-code-wrapper">
+                        <img src="images/getqrcode.jpg" alt="微信公众号二维码" class="qr-code">
+                        <span class="qr-hint">扫码关注</span>
+                    </div>
+                    <a href="https://mp.weixin.qq.com/s/rbk56q4tijPQ9atJZoVK2g" class="btn btn-secondary neon-btn" target="_blank">
+                        <i class="fas fa-book-open"></i>
+                        阅读公众号文章
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="link-card">
+                    <div class="link-icon github-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub 项目</h3>
+                    <p>查看项目源码、提交问题反馈、参与项目贡献</p>
+                    <a href="https://github.com/your-username/emo-vision" class="btn btn-secondary neon-btn" target="_blank">
+                        <i class="fas fa-code"></i>
+                        访问 GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -476,6 +674,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- 灯箱弹窗 -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

@@ -1,6 +1,39 @@
 // EMO视界 - 主要JavaScript功能
 
 document.addEventListener('DOMContentLoaded', function() {
+    // ==================== 加载动画 ====================
+    const loader = document.getElementById('loader');
+    
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 2200);
+
+    // ==================== 主题切换 ====================
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // 检查本地存储的主题
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.className = 'fas fa-moon';
+        } else {
+            themeIcon.className = 'fas fa-sun';
+        }
+    }
+
     // ==================== 粒子背景 ====================
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
@@ -74,6 +107,68 @@ document.addEventListener('DOMContentLoaded', function() {
         initParticles();
     });
 
+    // ==================== 截图灯箱 ====================
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const screenshotImgs = document.querySelectorAll('.screenshot-img');
+    
+    let currentImageIndex = 0;
+    const images = Array.from(screenshotImgs);
+    const captions = ['主界面', '播放界面', '搜索界面'];
+
+    screenshotImgs.forEach((img, index) => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            currentImageIndex = index;
+            openLightbox(index);
+        });
+    });
+
+    function openLightbox(index) {
+        lightbox.classList.add('active');
+        lightboxImg.src = images[index].src;
+        lightboxCaption.textContent = captions[index];
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showPrevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        openLightbox(currentImageIndex);
+    }
+
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        openLightbox(currentImageIndex);
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPrevImage);
+    lightboxNext.addEventListener('click', showNextImage);
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // 键盘控制
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrevImage();
+        if (e.key === 'ArrowRight') showNextImage();
+    });
+
     // ==================== 打字机效果 ====================
     const typewriterElement = document.querySelector('.typewriter');
     const text = 'EMO视界';
@@ -133,21 +228,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const testimonialsTrack = document.querySelector('.testimonials-track');
     let scrollPosition = 0;
     let scrollDirection = 1;
-    const scrollSpeed = 0.5;
+    const scrollSpeed = 0.8;
+    let isPaused = false;
 
     function scrollTestimonials() {
-        const trackWidth = testimonialsTrack.scrollWidth;
-        const wrapperWidth = testimonialsTrack.parentElement.offsetWidth;
+        if (!isPaused) {
+            const trackWidth = testimonialsTrack.scrollWidth;
+            const wrapperWidth = testimonialsTrack.parentElement.offsetWidth;
 
-        scrollPosition += scrollSpeed * scrollDirection;
+            scrollPosition += scrollSpeed * scrollDirection;
 
-        if (scrollPosition >= trackWidth - wrapperWidth) {
-            scrollDirection = -1;
-        } else if (scrollPosition <= 0) {
-            scrollDirection = 1;
+            if (scrollPosition >= trackWidth - wrapperWidth) {
+                scrollDirection = -1;
+            } else if (scrollPosition <= 0) {
+                scrollDirection = 1;
+            }
+
+            testimonialsTrack.style.transform = `translateX(-${scrollPosition}px)`;
         }
-
-        testimonialsTrack.style.transform = `translateX(-${scrollPosition}px)`;
         requestAnimationFrame(scrollTestimonials);
     }
 
@@ -155,13 +253,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 悬停暂停
     const testimonialsWrapper = document.querySelector('.testimonials-wrapper');
-    let isPaused = false;
 
     testimonialsWrapper.addEventListener('mouseenter', () => {
         isPaused = true;
     });
 
     testimonialsWrapper.addEventListener('mouseleave', () => {
+        isPaused = false;
+    });
+
+    // 触摸设备支持
+    testimonialsWrapper.addEventListener('touchstart', () => {
+        isPaused = true;
+    });
+
+    testimonialsWrapper.addEventListener('touchend', () => {
         isPaused = false;
     });
 
@@ -243,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        background: var(--gradient-1);
         color: white;
         border: none;
         cursor: pointer;
@@ -251,9 +357,10 @@ document.addEventListener('DOMContentLoaded', function() {
         display: none;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
         transition: all 0.3s ease;
         z-index: 999;
+        opacity: 0.9;
     `;
 
     document.body.appendChild(backToTopBtn);
