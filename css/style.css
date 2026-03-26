@@ -380,6 +380,13 @@ body {
     color: var(--primary-color);
 }
 
+.screenshot-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
 /* 下载区域 */
 .download {
     padding: 100px 0;
